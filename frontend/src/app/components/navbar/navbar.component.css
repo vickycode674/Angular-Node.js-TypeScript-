@@ -1,0 +1,13 @@
+.navbar {
+    background: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
