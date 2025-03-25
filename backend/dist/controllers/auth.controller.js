@@ -43,10 +43,8 @@ exports.registerUser = registerUser;
 const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { userId, password } = req.body;
-        console.log("Here is the user moving==============", userId);
         // Find user in DB
         const user = yield user_model_1.default.findOne({ userId });
-        console.log("Here is the user moving==============", user);
         if (!user)
             return res.status(400).json({ message: "Invalid credentials" });
         // Verify password
@@ -58,7 +56,6 @@ const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(200).json({ token, user: { userId: user.userId, role: user.role } });
     }
     catch (error) {
-        console.log("Here is the user moving==============", error);
         res.status(500).json({ message: "Server Error", error });
     }
 });

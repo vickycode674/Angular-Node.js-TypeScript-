@@ -7,9 +7,7 @@ interface AuthRequest extends Request {
 
 const authMiddleware = (roles: string[]) => {
   return (req: AuthRequest, res: Response, next: NextFunction) => {
-    console.log("Here is the user moving==============",req.header("Authorization"));
     const token = req.header("Authorization")?.split(" ")[1];
-    console.log("Here is the user moving==============",token);
 
     if (!token) return res.status(401).json({ message: "Access Denied" });
 

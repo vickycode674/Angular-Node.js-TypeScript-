@@ -37,11 +37,9 @@ export const registerUser = async (req: Request, res: Response) => {
 export const loginUser = async (req: Request, res: Response) => {
     try {
         const { userId, password } = req.body;
-        console.log("Here is the user moving==============",userId);
 
         // Find user in DB
         const user = await User.findOne({ userId });
-        console.log("Here is the user moving==============",user);
         if (!user) return res.status(400).json({ message: "Invalid credentials" });
         // Verify password
         const isMatch = await bcrypt.compare(password, user.password);
@@ -52,7 +50,6 @@ export const loginUser = async (req: Request, res: Response) => {
 
         res.status(200).json({ token, user: { userId: user.userId, role: user.role } });
     } catch (error) {
-        console.log("Here is the user moving==============",error);
         res.status(500).json({ message: "Server Error", error });
     }
 };
