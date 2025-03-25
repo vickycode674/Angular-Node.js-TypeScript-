@@ -2,12 +2,18 @@
     background: #007bff;
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+  
   .navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    margin: 0 15px;
     cursor: pointer;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
   }
   

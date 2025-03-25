@@ -3,14 +3,14 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);  /* 🔹 Soft blue gradient */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);  /* 🔹 Smooth blue gradient */
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  /* 🌟 Login Container */
-  .login-container {
+  /* 🌟 Register Container */
+  .register-container {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     padding: 30px;
@@ -23,7 +23,7 @@ body, html {
     transform: translate(-50%, -50%); /* 🔥 This ensures perfect centering */
   }
   
-  /* 🔹 Login Heading */
+  /* 🔹 Register Heading */
   h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -41,7 +41,7 @@ body, html {
   }
   
   /* 🔹 Input Fields */
-  input {
+  input, select {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -56,6 +56,12 @@ body, html {
   /* 🔹 Placeholder Styling */
   input::placeholder {
     color: #777;
+  }
+  
+  /* 🔹 Dropdown Select */
+  select {
+    background: white;
+    cursor: pointer;
   }
   
   /* 🔹 Submit Button */

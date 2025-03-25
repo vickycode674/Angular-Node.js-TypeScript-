@@ -1,0 +1,24 @@
+<div class="register-container">
+<h2>Register</h2>
+<form (submit)="onRegister()">
+  <label>User ID:</label>
+  <input type="text" [(ngModel)]="user.userId" name="userId" required />
+
+  <label>Password:</label>
+  <input type="password" [(ngModel)]="user.password" name="password" required />
+
+  <label>Role:</label>
+  <select [(ngModel)]="user.role" name="role" required>
+    <option value="Admin">Admin</option>
+    <option value="General User">General User</option>
+  </select>
+
+  <button type="submit">Register</button>
+</form>
+<p class="redirect-link">
+    Already have an account?
+    <button (click)="goToLogin()">Login here</button>
+  </p>
+  
+  
+</div>

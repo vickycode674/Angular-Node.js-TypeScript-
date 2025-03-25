@@ -1,13 +1,17 @@
 <div class="login-container">
     <h2>Login</h2>
-    <form>
+    <form (ngSubmit)="onLogin()">
       <label>User ID</label>
-      <input type="text" placeholder="Enter User ID">
-  
+      <input type="text" placeholder="Enter User ID" [(ngModel)]="userId" name="userId" required>  
+
       <label>Password</label>
-      <input type="password" placeholder="Enter Password">
-  
+      <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="password" required>  
+
       <button type="submit">Login</button>
     </form>
-  </div>
-  
+    <p class="redirect-link">
+        New user?
+        <button (click)="goToRegister()">Create an account</button>
+      </p>
+      
+</div>

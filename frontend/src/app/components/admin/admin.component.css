@@ -1,6 +1,113 @@
+/* 🌟 Admin Panel Container */
 .admin-container {
-    width: 80%;
-    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    background: linear-gradient(to right, #8e44ad, #c0392b); /* 🔹 Gradient for Admin Panel */
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+  }
+  
+  /* 🔹 Table Styling */
+  table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: rgba(121, 6, 202, 0.59);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* 🔹 Table Header */
+  th {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    font-size: 18px;
+    padding: 12px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+  }
+  
+  /* 🔹 Table Rows */
+  td {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* 🔹 Alternate Row Styling */
+  tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 🌟 Buttons Styling */
+  button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: #c0392b;
+  }
+  
+  /* 🔹 Success Button (For Adding Users) */
+  .success-btn {
+    background: #27ae60;
+  }
+  
+  .success-btn:hover {
+    background: #2ecc71;
+  }
+  
+  /* 🔹 Warning Button (For Editing Users) */
+  .warning-btn {
+    background: #f39c12;
+  }
+  
+  .warning-btn:hover {
+    background: #e67e22;
+  }
+  
+  /* 🔹 Message Styling */
+  p {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  /* 🌟 Responsive Design */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .admin-container {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    th, td {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
   }
   
