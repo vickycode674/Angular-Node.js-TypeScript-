@@ -1,14 +1,5 @@
 ### **🚀 README.md for Your Full-Stack Angular + Node.js Project**  
 
-### **📌 Step 1: Create `README.md` in Your Project Root**  
-In the root folder of your project, create a new file:  
-```sh
-touch README.md
-```
-Then, **copy-paste the following content** into `README.md` 👇  
-
----
-
 ## **🚀 Full-Stack Angular + Node.js Application**  
 This is a **full-stack web application** built with:  
 ✅ **Frontend:** Angular 12+  
