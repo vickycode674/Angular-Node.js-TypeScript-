@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { FormsModule } from '@angular/forms';  // ✅ Import FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  standalone: true,  // ✅ Mark as standalone component
-  imports: [FormsModule],  // ✅ Import FormsModule locally
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -44,6 +44,6 @@ export class LoginComponent {
   }
 
   goToRegister() {
-    this.router.navigate(['/register']);  // ✅ Redirect to Register
+    this.router.navigate(['/register']);
   }
 }

@@ -6,11 +6,11 @@ import { NavbarComponent } from '../navbar/navbar.component';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  imports: [NavbarComponent,CommonModule],  // ✅ Import the NavbarComponent
+  imports: [NavbarComponent,CommonModule], 
 })
 export class DashboardComponent implements OnInit {
   user: any;
-  activities: any[] = []; // ✅ Initialize an empty array
+  activities: any[] = [];
 
 
   constructor(private userService: UserService) {}
@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     this.userService.getUserDetails(user.userId).subscribe(data => {
       this.user = data;
-      this.activities = data.activities || []; // ✅ Ensure activities is always an array
+      this.activities = data.activities || []; 
     });
   }
 }

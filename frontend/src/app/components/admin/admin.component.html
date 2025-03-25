@@ -15,12 +15,12 @@
     <tr *ngFor="let user of users">
       <td>{{ user.userId }}</td>
       <td>{{ user.name }}</td>
-      <td>{{ user.role }}</td> <!-- ✅ Fixed role property -->
+      <td>{{ user.role }}</td>
       <td>
-        <button (click)="deleteUser(user.userId)">❌ Delete</button> <!-- ✅ Fixed method binding -->
+        <button (click)="deleteUser(user.userId)">❌ Delete</button>
       </td>
     </tr>
   </tbody>
 </table>
 
-<p *ngIf="users.length === 0">No users available.</p> <!-- ✅ Show message when no users exist -->
+<p *ngIf="users.length === 0">No users available.</p>

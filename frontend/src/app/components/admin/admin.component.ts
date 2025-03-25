@@ -6,7 +6,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [CommonModule, NavbarComponent], // ✅ Import NavbarComponent
+  imports: [CommonModule, NavbarComponent], 
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
@@ -23,7 +23,7 @@ export class AdminComponent implements OnInit {
 
   deleteUser(userId: number) {
     const deletedUser = this.users.find(user => user.userId === userId);
-    console.log(`Deleting user:`, deletedUser);  // ✅ Log deleted user
+    console.log(`Deleting user:`, deletedUser); 
     this.users = this.users.filter(user => user.userId !== userId);
   }
 }

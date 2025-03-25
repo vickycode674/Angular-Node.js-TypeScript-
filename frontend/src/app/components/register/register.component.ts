@@ -29,7 +29,6 @@ export class RegisterComponent {
 
     this.authService.register(this.user.userId, this.user.password, this.user.role).subscribe({
       next: (response) => {
-        console.log('✅ Registration successful:', response);
         localStorage.setItem('registered', 'true'); // 🔥 Mark user as registered
         alert('✅ Registration successful! Redirecting to login...');
         this.router.navigate(['/login']); // Auto-redirect after registration
@@ -42,6 +41,6 @@ export class RegisterComponent {
   }
 
   goToLogin() {
-    this.router.navigate(['/login']);  // ✅ Redirect to Login
+    this.router.navigate(['/login']);
   }
 }
